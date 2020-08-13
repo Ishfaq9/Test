@@ -39,7 +39,11 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "matched", Toast.LENGTH_SHORT).show();
                     Intent inten =new Intent(MainActivity.this,log.class);
                     startActivity(inten);
-                }else
+                }else if(e1.getText().toString().isEmpty()){
+
+                    e1.setError("Enter name");
+                }
+                else
                 {
                     Toast.makeText(MainActivity.this, "incorrect id and password", Toast.LENGTH_SHORT).show();
                 }
